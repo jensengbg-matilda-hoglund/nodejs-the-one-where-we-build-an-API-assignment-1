@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "name": "tilda",
+      "price": "200",
+      "imgurl": "https://placeimg.com/640/480/people"
+    },
+    {
+      "name": "fredrik",
+      "price": "50",
+      "imgurl": "https://placeimg.com/640/480/people1"
+    },
+    {
+      "name": "fredrik",
+      "price": "50",
+      "imgurl": "https://placeimg.com/640/480/people1"
+    }
+  ],
+  "cart": [
+    {
+      "name": "fredrik",
+      "price": "50",
+      "imgurl": "https://placeimg.com/640/480/people1"
+    }
+  ]
+}
