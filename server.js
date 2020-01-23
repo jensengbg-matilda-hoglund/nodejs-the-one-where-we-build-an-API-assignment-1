@@ -31,7 +31,7 @@ const initiateDatabase = () => {
   }
 };
 
-// ADD PRODUCT
+// ADD NEW PRODUCT
 const newProduct = async (name, price, imgurl) => {
   const response = await database
     .get("products")
@@ -43,29 +43,30 @@ const newProduct = async (name, price, imgurl) => {
 app.post("/api/products", async (request, response) => {
   let message = {
     success: true,
-    message: "New product added",
+    message: "New product added"
   };
 
   const { name, price, imgurl } = request.query;
   const res = await newProduct(name, price, imgurl);
-  message.data = res[0];
+  message.data = res[res.length - 1];
+  console.log(message.data);
   return response.send(message);
 });
 
-
-
 // ADD TO CART
-const add = async (name, price, imgurl) => {
-  let response = await database
+const add = async name => {
+  let response = "";
+  let product = await database
     .get("products")
-    .find({ name, price, imgurl })
+    .find({ name })
     .value();
 
-  if (response) {
+  if (product) {
     response = await database
       .get("cart")
-      .push({ name, price, imgurl })
+      .push({ product })
       .write();
+    return response;
   }
   return response;
 };
@@ -73,16 +74,22 @@ const add = async (name, price, imgurl) => {
 app.post("/api/cart", async (request, response) => {
   let message = {
     success: true,
-    message: "Product added",
+    message: "Product added to cart"
   };
 
-  const { name, price, imgurl } = request.query;
-  const res = await add(name, price, imgurl);
-  message.data = res[0];
+  if (typeof response == "string" || str instanceof String) {
+    message = {
+      success: false,
+      message: "No product added"
+    };
+  }
+  const { name } = request.query;
+  const res = await add(name);
+  if (res.length > 0) {
+    message.data = res[res.length - 1];
+  }
   return response.send(message);
 });
-
-
 
 // DELETE FROM CART
 const remove = async name => {
@@ -96,7 +103,7 @@ const remove = async name => {
 app.delete("/api/cart", async (request, response) => {
   let message = {
     success: true,
-    message: "Product removed",
+    message: "Product removed"
   };
 
   const { name } = request.query;
@@ -106,19 +113,15 @@ app.delete("/api/cart", async (request, response) => {
 });
 
 // GET CART
-app.get("/api/cart", () => {
-/*   let message = {
+app.get("/api/showCart", (req, res) => {
+  let message = {
     success: true,
-    message: "Cart found",
-  }; */
-  const response = database
-  .get("cart")
-  .value();
+    message: "Cart found"
+  };
+  //res = database.get("cart").value();
+  res.json(database.get("cart").value());
 
-  console.log(response)
-
-  return response
-
+  return res;
 });
 
 /* app.use(cors());
