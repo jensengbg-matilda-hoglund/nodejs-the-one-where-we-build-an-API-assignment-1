@@ -1,26 +1,60 @@
 {
   "products": [
     {
-      "name": "tilda",
-      "price": "200",
-      "imgurl": "https://placeimg.com/640/480/people"
+      "id": "541cbc45-ea2f-4ccf-ad8d-e318f6b768a1",
+      "name": "Channel Islands FishBeard surfboard Spine-Tek 6ft 0 Futures - White",
+      "price": "800.00",
+      "imgurl": "img/channel-islands-fish-beard-spine-tek-futures_a_4.jpg"
     },
     {
-      "name": "fredrik",
-      "price": "50",
-      "imgurl": "https://placeimg.com/640/480/people1"
+      "id": "d6e587c7-87c8-43e4-8d0c-79ef70d1f40f",
+      "name": "California Board Company Sushi Fish 5ft Surfboard",
+      "price": "950.00",
+      "imgurl": "img/california-board-company-sushi-fish-5ft8-surfboard_a_2.jpg"
     },
     {
-      "name": "fredrik",
-      "price": "50",
-      "imgurl": "https://placeimg.com/640/480/people1"
+      "id": "1eaecc9c-6538-4399-907c-56e90f558e0d",
+      "name": "Gerry Lopez Fishy 6ft 4 Features - Yellow",
+      "price": "730.00",
+      "imgurl": "img/gerrylopezsomethingfishy6ft4fcsiiyellow_a.jpg"
+    },
+    {
+      "id": "13abb3f6-993b-45af-89fc-e62ce002a259",
+      "name": "Takayama Scorpion II TufLite-PC surfboard 5ft 10 - Blue/Grey",
+      "price": "680.00",
+      "imgurl": "img/donald-takayama-scorpion-2-5ft10-blue-grey_b.jpg"
+    },
+    {
+      "id": "9aeebd16-38de-4890-a4c2-075c340abdd8",
+      "name": "Gerry Lopez Fishy 6ft - Light Blue",
+      "price": "660.00",
+      "imgurl": "img/gerry-lopez-something-fishy-fcsii-light-blue_a.jpg"
+    },
+    {
+      "id": "905245fc-19a3-46d6-bbf5-40d19a7cc414",
+      "name": "Firiwire El Tomo Fish 5ft",
+      "price": "720.00",
+      "imgurl": "img/firewire-el-tomo-fish-5ft7-fcsii_h_6.jpg"
+    },
+    {
+      "id": "5800410b-f785-4aae-9297-9b268b0e6ae0",
+      "name": "Walden Mini Mega Magic - Blue White",
+      "price": "720.00",
+      "imgurl": "img/walden-mini-mega-magic-tuflite-7ft6-blue-white_b.jpg"
+    },
+    {
+      "id": "142c0f21-b14e-4ba4-a7a1-5be34da08282",
+      "name": "Walden Mini Mega Magic - Red White",
+      "price": "700.00",
+      "imgurl": "walder-mini-mega-magic-tuflite-surfboard-6ft10-red-white_b"
     }
   ],
   "cart": [
     {
-      "name": "fredrik",
-      "price": "50",
-      "imgurl": "https://placeimg.com/640/480/people1"
+      "id": "13abb3f6-993b-45af-89fc-e62ce002a259",
+      "name": "Takayama Scorpion II TufLite-PC surfboard 5ft 10 - Blue/Grey",
+      "price": "680.00",
+      "imgurl": "img/donald-takayama-scorpion-2-5ft10-blue-grey_b.jpg"
     }
   ]
 }
