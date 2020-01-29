@@ -19,16 +19,16 @@ const newProduct = async (name, price, imgurl) => {
   return response;
 };
 
-app.post("/api/products", async (request, response) => {
+app.post("/api/products", async (req, res) => {
   let message = {
     success: true,
     message: "New product added"
   };
 
-  const { name, price, imgurl } = request.query;
-  const res = await newProduct(name, price, imgurl);
-  message.data = res[res.length - 1];
-  return response.send(message);
+  const { name, price, imgurl } = req.query;
+  const data = await newProduct(name, price, imgurl);
+  message.data = data[data.length - 1];
+  return res.send(message);
 });
 
 // GET ALL PRODUCTS

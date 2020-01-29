@@ -49,12 +49,5 @@
       "imgurl": "walder-mini-mega-magic-tuflite-surfboard-6ft10-red-white_b"
     }
   ],
-  "cart": [
-    {
-      "id": "13abb3f6-993b-45af-89fc-e62ce002a259",
-      "name": "Takayama Scorpion II TufLite-PC surfboard 5ft 10 - Blue/Grey",
-      "price": "680.00",
-      "imgurl": "img/donald-takayama-scorpion-2-5ft10-blue-grey_b.jpg"
-    }
-  ]
+  "cart": []
 }
